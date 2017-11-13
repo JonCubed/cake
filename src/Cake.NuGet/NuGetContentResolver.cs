@@ -63,7 +63,7 @@ namespace Cake.NuGet
             var current = NuGetFramework.Parse(_environment.Runtime.TargetFramework.FullName, provider);
 
             // Get all ref assemblies.
-            var refAssemblies = _globber.GetFiles(path.FullPath + "/ref/**/*.dll");
+            var refAssemblies = _globber.GetFiles(path.FullPath + "/**/ref/**/*.dll");
 
             // Get all candidate files.
             var pathComparer = PathComparer.Default;
